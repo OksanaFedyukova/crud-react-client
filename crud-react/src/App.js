@@ -1,11 +1,13 @@
 
 import './App.css';
+import PublicRoute from './router/PublicRouter';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+     <div>
+     <PublicRoute/>
+     </div>
+   
   );
 }
 

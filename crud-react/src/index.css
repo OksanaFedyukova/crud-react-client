@@ -1,12 +1,18 @@
+
 body {
-  margin: 0;
+
   font-family: 'Poppins', sans-serif;
   font-family: 'Prosto One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+ background-color: #2EC1AC;
+  color: #3E978B;
+} 
 
+h2, h3{
+  color: white;
+}
 code {
-  font-family: 'Poppins', sans-serif;
+font-family: 'Poppins', sans-serif;
 font-family: 'Prosto One', cursive;
 }
