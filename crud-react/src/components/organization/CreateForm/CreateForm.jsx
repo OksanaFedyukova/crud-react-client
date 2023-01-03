@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import Form from 'react-bootstrap/Form';
 
 function CreateForm() {
   return (
@@ -10,13 +10,20 @@ function CreateForm() {
     <Card border="light">
       <Card.Header as="h6">fecha</Card.Header>
       <Card.Body>
-        <Card.Title>coder</Card.Title>
-        <Card.Title>technology</Card.Title>
-        <Card.Text>
-           description
-        </Card.Text>
+      <Form>
+
+      
+      <input type="undefined" placeholder="date" />
+      <input type="undefined" placeholder="coder" />
+      <input type="undefined" placeholder="technology" />
+      <input type="undefined" placeholder="description"  />
+    
+      </Form>
+
+
+
         <Button variant="light">cancel</Button>{' '}
-      <Button variant="info">submit</Button>{' '}
+        <Button type="submit" variant="info">submit</Button>{' '}
       </Card.Body>
       <Card.Footer className="text-muted">see you soon</Card.Footer>
     </Card>

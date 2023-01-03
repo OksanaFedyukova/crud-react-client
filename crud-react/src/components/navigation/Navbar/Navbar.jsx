@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Container from 'react-bootstrap/Container';
 import {
 	NavbarContainer,
 	LeftContainer,
@@ -12,31 +11,29 @@ import {
 	OpenLinksButton,
 	NavbarLinkExtended,
 } from './Navbar.styled';
-import Create from '../../../views/Create/Create';
-import Update from '../../../views/Update/Update';
-import LogoSVG from '../../../assets/logos/logoweb.png';
-import { Link } from 'react-router-dom';
-import Citas from '../../../views/Citas';
+import LogoSVG from '../../../assets/logos/logomob.png';
+import {Link} from 'react-router-dom';
+
 
 function Navbar() {
 	const [extendNavbar, setExtendNavbar] = useState(false);
 	return (
-		<NavbarContainer className="sticky-top">
-     < Container>
+		<NavbarContainer>
 			<NavbarInnerContainer>
-				<Link to="/" className='d-flex align-items-center'>
+		
 					<LeftContainer className='align-items-center'>
 						{' '}
 						<Logo src={LogoSVG}></Logo>
-						<p className='ms-2 mb-0 fw-bold fs-5'>Oksana<sub className='d-block mb-2'>Fedyukova</sub></p>
 					</LeftContainer>
-				</Link>
+	
 
 				<RightContainer>
 					<NavbarLinkContainer>
-						<NavbarLink>
-							<Citas/>
-							<Link to="/">{Citas}</Link>
+					<NavbarLink >
+						<Link to={"/"}>my appointments</Link></NavbarLink>
+						<NavbarLink >
+						<Link to={"/create:app"}>create new
+						</Link>
 						</NavbarLink>
 						<OpenLinksButton
 							onClick={() => {
@@ -50,14 +47,12 @@ function Navbar() {
 			</NavbarInnerContainer>
 			{extendNavbar && (
 				<NavbarExtendedContainer>
-					<NavbarLinkExtended>
-							<Citas/>
-                            <Create/>
-							<Update/>
+					<NavbarLinkExtended to={"/"}>my appointments
+					</NavbarLinkExtended>
+					<NavbarLinkExtended to={"/create:app"}>create new
 					</NavbarLinkExtended>
 				</NavbarExtendedContainer>
 			)}
-      </Container>
 		</NavbarContainer>
 	);
 }

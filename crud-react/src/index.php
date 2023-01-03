@@ -65,7 +65,7 @@ if(isset($_GET["actualizar"])){
 }
 // Consulta todos los registros de la tabla empleados
 $sqlCitas = mysqli_query($conexionBD,"SELECT * FROM citas");
-if(mysqli_num_rows($sqlEmpleaados) > 0){
+if(mysqli_num_rows($sqlCitas) > 0){
     $citas = mysqli_fetch_all($sqlCitas,MYSQLI_ASSOC);
     echo json_encode($citas);
 }
