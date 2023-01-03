@@ -3,19 +3,23 @@ import styled from "styled-components" ;
 import {colorVariables} from "../../../utils/variables";
 /* import {Link} from "react-route-dom"; */
 
+export const Link = styled.a `
+text-decoration: none; !important;
+`;
 
 export const NavbarContainer = styled.nav`
 width: 100%;
-height: 80px;
+height: 60px;
 display: flex;
 flex-direction: column;
-background: transparent;
-backdrop-filter: blur(5px);
-//background-color:transparent; 
+background: ${colorVariables.yellow} ;
+backdrop-filter: blur(15px);
+
 `;
 export const RightContainer = styled.div `
 flex: 40%;
 display: flex;
+margin-right: 20px;
 justify-content: flex-end;
 align-items: center;
 /* padding-right: 5%; */
@@ -31,8 +35,7 @@ export const LeftContainer = styled.div `
 flex: 30%;
 display: flex;
 justify-content: flex-start;
-/* padding-left: 30px; */
-
+margin-left: 20px;
 
 `;
 export const NavbarInnerContainer = styled.div `
@@ -46,13 +49,12 @@ display: flex;
 `;
 export const NavbarLink = styled.div `
 color: ${colorVariables.darkblue};
-font-family: ‘ProstoOne’, sans-serif;
-font-size: 16px;;
+font-size: 16px;
 text-decoration: none;
-margin: 2px;
+margin: 10px;
 &:hover,
 &:focus{
-    color: ${colorVariables.yellow};
+    color: white;
 };
 @media (max-width:700px) {display: none} ;
 `;
@@ -65,32 +67,26 @@ margin: 8px;
 
 &:hover,
 &:focus{
-    color: ${colorVariables.yellow};
-    background-color:${colorVariables.darkblue};
+    color: white;
+   
 };
 `;
 
 export const Logo = styled.img `
-/* margin-top:15px; */
+padding:0;
 width: auto;
-height: 50px;
+height: 30px;
 `;
 
 export const OpenLinksButton = styled.button`
-/*  width: 70px; */
-/*  height:50px; */
- background: none;
  border: none;
  color: ${colorVariables.darkblue};
-/*  font-size:2rem; */
-/*  padding:8px 8px; */
-/*  margin:5px; */
-font-size: 3rem;
+font-size: 30px;
 padding:0;
   cursor: pointer;
  @media (min-width:700px) {display: none} ;
   &:hover,
-&:focus{
+  &:focus{
     color: ${colorVariables.yellow};
     background-color:${colorVariables.darkblue};
 
@@ -100,7 +96,7 @@ export const NavbarExtendedContainer = styled.div `
 display: flex;
 flex-direction: column;
 align-items:center;
-background: ${colorVariables.beige};
+background: ${colorVariables.blue};
 backdrop-filter: blur(10px);
 
 @media (min-width: 700px) {

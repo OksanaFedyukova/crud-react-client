@@ -11,18 +11,22 @@ class UpdateForm extends React.Component {
 render() {
   return(
     <div>
-      <h3>Update Your Appointment</h3>
-      
+  
     <Card border="light">
-      <Card.Header as="h6">fecha</Card.Header>
+      <Card.Header as="h6">Update Your Appointment</Card.Header>
       <Card.Body>
-        <Card.Title>coder</Card.Title>
-        <Card.Title>technology</Card.Title>
-        <Card.Text>
-           description
-        </Card.Text>
+      
+    <form >
+      <input type="undefined" placeholder="date" />
+      <input type="undefined" placeholder="coder" />
+      <input type="undefined" placeholder="technology" />
+      <input type="undefined" placeholder="description"  />
+
+    
+    </form>
+
         <Button variant="light">cancel</Button>{' '}
-      <Button variant="info">submit</Button>{' '}
+        <Button  type="submit" variant="info">submit</Button>{' '}
       </Card.Body>
       <Card.Footer className="text-muted">see you soon</Card.Footer>
     </Card>

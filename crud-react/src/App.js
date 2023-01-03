@@ -1,6 +1,6 @@
 
 import './App.css';
-import PublicRoute from './router/PublicRouter';
+import PublicRoute from './router/PublicRoute';
 
 function App() {
   return (
