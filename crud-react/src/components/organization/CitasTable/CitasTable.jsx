@@ -1,6 +1,8 @@
 import React from 'react';
-import './CitasTables.js';
-import Table from 'react-bootstrap/Table';
+import './CitasTables.scss';
+//import Table from 'react-bootstrap/Table';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Card from 'react-bootstrap/Card'; 
@@ -39,45 +41,48 @@ const{datosCargados, citas}=this.state
 
   return( 
   <>
-  <Card>
+  <h3>All My Appointments</h3> 
+  <Card id="cardTable">
     <Card.Header>
-    <Link to={"/create:app"}> <Button variant="success"> create new appointment</Button></Link>
+    <Link to={"/create:app"}> <Button variant="success" id="btnCreate"> create new appointment</Button></Link>
     </Card.Header>
     <Card.Body>
-   <h1>all my appointments</h1> 
-    <Table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>fecha</th>
-        <th>technology</th>
-        <th>coder</th>
-        <th>description</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
+    <Table >
+    <Thead>
+      <Tr>
+        <Th>ID</Th>
+        <Th>fecha</Th>
+        <Th>technology</Th>
+        <Th>coder</Th>
+        <Th>description</Th>
+        <Th></Th>
+      
+      </Tr>
+    </Thead>
+    <Tbody id="tblLista">
 
   {citas.map((cita)=>(
-      <tr key={cita.id}>
-        <td>{cita.id}</td>
-        <td>{cita.fecha}</td>
-        <td>{cita.technology}</td>
-        <td>{cita.coder} </td>
-        <td>{cita.description}</td>
-        <td>
+      <Tr key={cita.id}>
+        <Td>{cita.id}</Td>
+        <Td>{cita.fecha}</Td>
+        <Td>{cita.technology}</Td>
+        <Td>{cita.coder} </Td>
+        <Td>{cita.description}</Td>
+       
+        <Td>
            <ButtonGroup size="sm">
-           <Link to={"/update:app"}> <Button variant="warning"> + edit</Button></Link> 
-             <Button variant="danger">delete</Button>{' '}
+           <Link to={"/update:app"}> <Button variant="warning" id="btnEdit"> + edit</Button></Link> 
+             <Button id="btnDelete" variant="danger">delete</Button>{' '}
             </ButtonGroup>
-         </td>
+            <Td><h6>{cita.created}</h6></Td>
+         </Td>
     
-      </tr>
+      </Tr>
   )
 )
 
 }
-    </tbody>
+    </Tbody>
   </Table> 
     </Card.Body>
   </Card>

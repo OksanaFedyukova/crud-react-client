@@ -30,9 +30,9 @@ function Navbar() {
 				<RightContainer>
 					<NavbarLinkContainer>
 					<NavbarLink >
-						<Link to={"/"}>my appointments</Link></NavbarLink>
+						<Link to={"/"}>My Appointments</Link></NavbarLink>
 						<NavbarLink >
-						<Link to={"/create:app"}>create new
+						<Link to={"/create:app"}>Create New
 						</Link>
 						</NavbarLink>
 						<OpenLinksButton
@@ -47,9 +47,10 @@ function Navbar() {
 			</NavbarInnerContainer>
 			{extendNavbar && (
 				<NavbarExtendedContainer>
-					<NavbarLinkExtended to={"/"}>my appointments
+					<NavbarLinkExtended> <Link to={"/"}>My Appointments</Link>
 					</NavbarLinkExtended>
-					<NavbarLinkExtended to={"/create:app"}>create new
+					<NavbarLinkExtended ><Link to={"/create:app"}>Create New
+						</Link>
 					</NavbarLinkExtended>
 				</NavbarExtendedContainer>
 			)}

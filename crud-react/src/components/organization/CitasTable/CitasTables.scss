@@ -1,0 +1,38 @@
+#cardTable {
+ background: linear-gradient(to left,#D2E603, #2EC1AC);
+ margin-bottom: 50px;
+ border-color: #e3e4d9;
+};
+#btnEdit {
+background-color: #2EC1AC;
+border-color: transparent;
+};
+#btnEdit:hover {
+    background-color:#e3e4d9;
+    color: #1d433e;
+    border-color: transparent;
+};
+
+#btnDelete {
+    border-color: transparent;
+    };
+    #btnDelete:hover {
+        background-color:#e3e4d9;
+        color: #b51818;
+        border-color: transparent;
+    };
+#btnCreate {
+    background-color: #2EC1AC;
+    border-color: transparent;
+    border-color: #e3e4d9;
+    border-width: 3px;
+};
+#btnCreate:hover {
+    background-color:#e3e4d9;
+    color: #118776;
+    border-color: transparent;
+};
+#tblLista{
+    border: #e3e4d9;
+    border-width: 3px;
+}
