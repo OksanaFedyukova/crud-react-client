@@ -18,7 +18,7 @@ export default class PublicRoute extends React.Component {
             <Routes>
                 <Route exact path="/" element={<Citas/>}/>
                 <Route path="/create:app" element={<Create/>}/>
-                <Route path="/update:app" element={<Update/>}/>
+                <Route path="/update:app/:id" element={<Update/>}/>
                 <Route path="*" element = {<NotFounded/>}/>
             </Routes>
           

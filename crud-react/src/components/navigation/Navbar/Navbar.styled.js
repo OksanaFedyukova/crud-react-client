@@ -9,7 +9,7 @@ width: 100%;
 height: 60px;
 display: flex;
 flex-direction: column;
-background: linear-gradient(to bottom right,#D2E603, #2EC1AC);
+background: white;
 backdrop-filter: blur(20px);
 
 top:0;
@@ -34,7 +34,7 @@ export const LeftContainer = styled.div `
 flex: 30%;
 display: flex;
 justify-content: flex-start;
-margin-left: 20px;
+margin-left: 15px;
 
 `;
 export const NavbarInnerContainer = styled.div `
@@ -73,8 +73,9 @@ margin: 8px;
 
 export const Logo = styled.img `
 padding:0;
-width: 60px;
-height: 40px;
+margin:0;
+width: 65px;
+height: 50px;
 `;
 
 export const OpenLinksButton = styled.button`

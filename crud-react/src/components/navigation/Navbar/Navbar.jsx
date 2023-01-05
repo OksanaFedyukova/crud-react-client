@@ -11,7 +11,7 @@ import {
 	OpenLinksButton,
 	NavbarLinkExtended,
 } from './Navbar.styled';
-import LogoSVG from '../../../assets/logos/logomob.png';
+import LogoSVG from '../../../assets/logos/logoCircle.png';
 import {Link} from 'react-router-dom';
 
 

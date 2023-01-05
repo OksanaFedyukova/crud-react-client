@@ -16,7 +16,20 @@ class CitasTable extends React.Component {
     citas:[]
     }
   }
+  
 
+  borrarRegistros = (id) => {
+    console.log(id);
+
+    fetch("http://localhost/citas/?borrar="+id)
+   .then(respuesta=>respuesta.json())
+   .then((datosRespuesta)=> {
+                console.log(datosRespuesta);
+                this.cargarDatos();
+   })
+   .catch(console.log)
+   } 
+ 
   cargarDatos(){
    fetch("http://localhost/citas/")
   .then(respuesta=>respuesta.json())
@@ -26,7 +39,10 @@ class CitasTable extends React.Component {
   })
   .catch(console.log)
   }
-  componentDidMount(){
+
+
+  componentDidMount()
+  {
     this.cargarDatos();
   }
 
@@ -37,7 +53,6 @@ const{datosCargados, citas}=this.state
   return(<div>Downloading.....</div>);
  }
  else{
-
 
   return( 
   <>
@@ -54,7 +69,7 @@ const{datosCargados, citas}=this.state
         <Th>fecha</Th>
         <Th>technology</Th>
         <Th>coder</Th>
-        <Th>description</Th>
+        <Th>comments</Th>
         <Th></Th>
       
       </Tr>
@@ -67,12 +82,15 @@ const{datosCargados, citas}=this.state
         <Td>{cita.fecha}</Td>
         <Td>{cita.technology}</Td>
         <Td>{cita.coder} </Td>
-        <Td>{cita.description}</Td>
+        <Td>{cita.comments}</Td>
        
         <Td>
            <ButtonGroup size="sm">
-           <Link to={"/update:app"}> <Button variant="warning" id="btnEdit"> + edit</Button></Link> 
-             <Button id="btnDelete" variant="danger">delete</Button>{' '}
+           <Link to={"/update:app/"+cita.id}> <Button variant="warning"
+           onClick={()=>this.consultarRegistros(cita.id)} id="btnEdit"> + edit</Button></Link> 
+             <Button type="button" id="btnDelete" variant="danger"
+             onClick={()=>this.borrarRegistros(cita.id)}
+             >delete</Button>{' '}
             </ButtonGroup>
             <Td><h6>{cita.created}</h6></Td>
          </Td>
@@ -92,29 +110,3 @@ const{datosCargados, citas}=this.state
 }
 }
 export default CitasTable;
-
-
-
-/* function CitasTables() {
-  return (
-    <div>
-  
-    <Card border="light">
-      <Card.Header as="h6">fecha</Card.Header>
-      <Card.Body>
-        <Card.Title>coder</Card.Title>
-        <Card.Title>technology</Card.Title>
-        <Card.Text>
-           description
-        </Card.Text>
-        <Button variant="info">+  edit</Button>{' '}
-      <Button variant="warning">delete</Button>{' '}
-      </Card.Body>
-      <Card.Footer className="text-muted">see you soon</Card.Footer>
-    </Card>
-    </div>
-
-  );
-} 
-
-export default CitasTables;*/
