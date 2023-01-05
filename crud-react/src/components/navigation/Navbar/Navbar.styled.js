@@ -3,17 +3,16 @@ import styled from "styled-components" ;
 import {colorVariables} from "../../../utils/variables";
 /* import {Link} from "react-route-dom"; */
 
-export const Link = styled.a `
-text-decoration: none; !important;
-`;
 
 export const NavbarContainer = styled.nav`
 width: 100%;
 height: 60px;
 display: flex;
 flex-direction: column;
-background: ${colorVariables.yellow} ;
-backdrop-filter: blur(15px);
+background: white;
+backdrop-filter: blur(20px);
+
+top:0;
 
 `;
 export const RightContainer = styled.div `
@@ -35,7 +34,7 @@ export const LeftContainer = styled.div `
 flex: 30%;
 display: flex;
 justify-content: flex-start;
-margin-left: 20px;
+margin-left: 15px;
 
 `;
 export const NavbarInnerContainer = styled.div `
@@ -74,8 +73,9 @@ margin: 8px;
 
 export const Logo = styled.img `
 padding:0;
-width: auto;
-height: 30px;
+margin:0;
+width: 65px;
+height: 50px;
 `;
 
 export const OpenLinksButton = styled.button`

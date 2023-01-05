@@ -1,0 +1,28 @@
+
+
+footer {
+    background: linear-gradient(to bottom right, #2EC1AC, #D2E603);
+    bottom:0;
+   position:fixed;
+width: 100%;
+    
+ a {text-decoration-line: none;
+    color: #1a3835;};
+    a:hover {
+        color: white;
+    }
+} ;
+
+ul {
+    list-style-type: none;
+    font-weight:500;
+    li {
+        float: right;
+        margin-right: 10px;
+    }
+}  
+.container-sm {display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-left: 0;
+}
